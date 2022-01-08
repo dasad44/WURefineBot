@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\WURefineBot\\WpfApp4\\WpfApp4.csproj": {}
+    "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj": {}
   },
   "projects": {
-    "D:\\repos\\WURefineBot\\WpfApp4\\WpfApp4.csproj": {
+    "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\WURefineBot\\WpfApp4\\WpfApp4.csproj",
-        "projectName": "WpfApp4",
-        "projectPath": "D:\\repos\\WURefineBot\\WpfApp4\\WpfApp4.csproj",
+        "projectUniqueName": "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
+        "projectName": "WURefineBot",
+        "projectPath": "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
         "packagesPath": "C:\\Users\\mateusz\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\WURefineBot\\WpfApp4\\obj\\",
+        "outputPath": "D:\\repos\\WURefineBot\\WURefineBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
