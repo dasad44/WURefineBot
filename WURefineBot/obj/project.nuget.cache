@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "hKBP62P+V9zZVt3SsSQWvj/zPB61EoVNzFBt3nBZz2gF5WYw5HmPbT3TAc2z+Hpnckv9M0K0Mt1OtjDIdn3q7w==",
+  "dgSpecHash": "jl4vTad66cRZ9hxA0h4nMDlR/9QYpCttk6iQgFmgS/b2hh8nQmytMtNGifKRgMOjTRniaiXbYSvYzJlD6i9Fiw==",
   "success": true,
   "projectFilePath": "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mateusz\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
+    "C:\\Users\\mateusz\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\mateusz\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\mateusz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\mateusz\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\mateusz\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
