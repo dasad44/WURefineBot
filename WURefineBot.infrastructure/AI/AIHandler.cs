@@ -2,11 +2,11 @@
 using AForge.Imaging;
 using AForge.Imaging.Filters;
 using System.Drawing;
-
+using WURefineBot.Infrastructure.Interfaces;
 
 namespace WURefineBot.Infrastructure.AI
 {
-    static class AIHandler
+    static class AIHandler 
     {
         public static bool Contains(this Bitmap template, Bitmap bmp)
         {
