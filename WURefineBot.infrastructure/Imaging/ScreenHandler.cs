@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WURefineBot.Infrastructure.Interfaces;
 
@@ -12,17 +7,15 @@ namespace WURefineBot.Infrastructure.Imaging
 {
     class ScreenHandler : IScreenHandler
     {
-        public Bitmap ScreenCapture()
-        {
-            var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width,
+        public Bitmap GetMainScreen()
+        {       
+            return new Bitmap(Screen.PrimaryScreen.Bounds.Width,
                                Screen.PrimaryScreen.Bounds.Height,
-                               PixelFormat.Format32bppArgb);          
-            return bmpScreenshot;
+                               PixelFormat.Format32bppArgb);
         }
-        public Bitmap ConvertToBmp(string picture)
+        public Bitmap GetImage(string picture)
         {
-            Bitmap myBitmap = new Bitmap(picture);
-            return myBitmap;
+            return new Bitmap(picture);
         }
 
     }

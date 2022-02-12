@@ -9,7 +9,7 @@ namespace WURefineBot.Infrastructure.Interfaces
 {
     public interface IScreenHandler
     {
-        Bitmap ScreenCapture();
-        Bitmap ConvertToBmp(string picture);
+        Bitmap GetMainScreen();
+        Bitmap GetImage(string picture);
     }
 }
