@@ -5,7 +5,7 @@ using WURefineBot.Infrastructure.Interfaces;
 
 namespace WURefineBot.Infrastructure.Imaging
 {
-    class ScreenHandler : IScreenHandler
+     public class ScreenHandler : IScreenHandler
     {
         public Bitmap GetMainScreen()
         {       
