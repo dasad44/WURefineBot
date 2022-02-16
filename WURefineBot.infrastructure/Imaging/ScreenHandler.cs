@@ -13,10 +13,5 @@ namespace WURefineBot.Infrastructure.Imaging
                                Screen.PrimaryScreen.Bounds.Height,
                                PixelFormat.Format32bppArgb);
         }
-        public Bitmap GetImage(string picture)
-        {
-            return new Bitmap(picture);
-        }
-
     }
 }

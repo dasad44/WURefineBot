@@ -10,6 +10,5 @@ namespace WURefineBot.Infrastructure.Interfaces
     public interface IScreenHandler
     {
         Bitmap GetMainScreen();
-        Bitmap GetImage(string picture);
     }
 }

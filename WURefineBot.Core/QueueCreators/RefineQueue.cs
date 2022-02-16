@@ -1,29 +1,32 @@
-﻿
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WURefineBot.Infrastructure.Imaging;
-using WURefineBot;
+using WURefineBot.Infrastructure.Interfaces;
 
 namespace WURefineBot.Core.QueueCreators
 {
     class RefineQueue
     {
-        public List<Bitmap> CreateQueue(string pictures)
-        {       
-            List<Bitmap> ImageList = new List<Bitmap>();
-            ScreenHandler screenHandler = new ScreenHandler();
-            screenHandler.GetImage(pictures);
-            ImageList.Add(WURefineBot.Core.Properties.Resources.Menu);
-            ImageList.Add(WURefineBot.Core.Properties.Resources.equipment);
-            ImageList.Add(WURefineBot.Core.Properties.Resources.resources);
-            ImageList.Add(WURefineBot.Core.Properties.Resources.lasers);
+        private readonly List<Bitmap> _imageList;
+        public RefineQueue()
+        {
+            _imageList = new List<Bitmap>();
+        }
+
+        public List<Bitmap> CreateQueue()
+        {
+            GetImagesFromResources();
+            return _imageList;
+        }
+        
+        private void GetImagesFromResources()
+        {
+            _imageList.Add(WURefineBot.Core.Properties.Resources.Menu);
+            _imageList.Add(WURefineBot.Core.Properties.Resources.equipment);
+            _imageList.Add(WURefineBot.Core.Properties.Resources.resources);
+            _imageList.Add(WURefineBot.Core.Properties.Resources.lasers);
             //to do : wybór surowca
-            ImageList.Add(WURefineBot.Core.Properties.Resources.enrich);
-            return new List<Bitmap>(CreateQueue(pictures));
-        }      
+            _imageList.Add(WURefineBot.Core.Properties.Resources.enrich);
+        }
     }
 }
