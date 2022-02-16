@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using WURefineBot.Core.Interfaces.QueueCreators;
 using WURefineBot.Infrastructure.Imaging;
 using WURefineBot.Infrastructure.Interfaces;
 
 namespace WURefineBot.Core.QueueCreators
 {
-    class RefineQueue
+    class RefineQueue : IRefineQueue 
     {
         private readonly List<Bitmap> _imageList;
         public RefineQueue()
