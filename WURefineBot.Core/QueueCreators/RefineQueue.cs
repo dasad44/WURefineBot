@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using WURefineBot.Core.Interfaces.Menagers;
 using WURefineBot.Core.Interfaces.QueueCreators;
 using WURefineBot.Infrastructure.Imaging;
 using WURefineBot.Infrastructure.Interfaces;
@@ -8,19 +9,21 @@ namespace WURefineBot.Core.QueueCreators
 {
     class RefineQueue : IRefineQueue 
     {
+        private readonly IResourcesMenager _resourcesMenager;
         private readonly List<Bitmap> _imageList;
-        public RefineQueue()
+        public RefineQueue(IResourcesMenager resourcesMenager)
         {
             _imageList = new List<Bitmap>();
+            _resourcesMenager = resourcesMenager;
         }
 
         public List<Bitmap> CreateQueue()
         {
-            GetImagesFromResources();
+            GetImagesFromResources();         
             return _imageList;
         }
         
-        private void GetImagesFromResources()
+        private void GetImagesFromResources() 
         {
             _imageList.Add(WURefineBot.Core.Properties.Resources.Menu);
             _imageList.Add(WURefineBot.Core.Properties.Resources.equipment);
