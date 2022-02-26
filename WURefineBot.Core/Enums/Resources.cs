@@ -1,5 +1,8 @@
-﻿public enum Resources
+﻿namespace WURefineBot.Core.Enums
 {
-    Darkonit,
-    Dungid
+    public enum Resources
+    {
+        Darkonit,
+        Dungid
+    }
 }

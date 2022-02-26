@@ -12,14 +12,14 @@ namespace WURefineBot.Core.Menagers
     class ResourceMenager : IResourcesMenager
     {
         private IResource _resource;
-        public IResource GetResource(Resources resources)
+        public IResource GetResource(WURefineBot.Core.Enums.Resources resources)
         {
             switch (resources)
             {
-                case Resources.Darkonit:
+                case WURefineBot.Core.Enums.Resources.Darkonit:
                     _resource = new DarkonitResource();
                     break;
-                case Resources.Dungid:
+                case WURefineBot.Core.Enums.Resources.Dungid:
                     _resource = new DungidResourece();
                     break;
             }

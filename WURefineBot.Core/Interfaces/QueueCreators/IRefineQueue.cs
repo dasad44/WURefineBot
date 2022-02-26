@@ -10,6 +10,6 @@ namespace WURefineBot.Core.Interfaces.QueueCreators
 {
     public interface IRefineQueue
     {
-        List<Bitmap> CreateQueue();
+        List<Bitmap> CreateQueue(WURefineBot.Core.Enums.Resources resource);
     }
 }
