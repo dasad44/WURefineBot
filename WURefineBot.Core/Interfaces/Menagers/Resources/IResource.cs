@@ -9,6 +9,6 @@ namespace WURefineBot.Core.Interfaces.Menagers.Resources
 {
     interface IResource
     {
-        Bitmap Getimage();
+        Bitmap GetImage();
     }
 }

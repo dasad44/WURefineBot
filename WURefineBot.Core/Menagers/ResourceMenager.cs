@@ -9,7 +9,7 @@ using WURefineBot.Core.Interfaces.Menagers.Resources;
 
 namespace WURefineBot.Core.Menagers
 {
-    class ResourceMenager : IResourcesMenager
+    class ResourceMenager : IResourcesManager
     {
         private IResource _resource;
         public IResource GetResource(WURefineBot.Core.Enums.Resources resources)
@@ -29,14 +29,14 @@ namespace WURefineBot.Core.Menagers
     }
     class DarkonitResource : IResource
     {
-        public Bitmap Getimage()
+        public Bitmap GetImage()
         {
             return new Bitmap(WURefineBot.Core.Properties.Resources.darkonit);
         }
     }
     class DungidResourece : IResource
     {
-        public Bitmap Getimage()
+        public Bitmap GetImage()
         {
             return new Bitmap(WURefineBot.Core.Properties.Resources.dungid);
         }

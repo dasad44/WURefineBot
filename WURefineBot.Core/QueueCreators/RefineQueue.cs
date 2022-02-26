@@ -9,12 +9,12 @@ namespace WURefineBot.Core.QueueCreators
 {
     class RefineQueue : IRefineQueue 
     {
-        private readonly IResourcesMenager _resourcesMenager;
+        private readonly IResourcesManager _resourcesManager;
         private readonly List<Bitmap> _imageList;
-        public RefineQueue(IResourcesMenager resourcesMenager)
+        public RefineQueue(IResourcesManager resourcesManager)
         {
             _imageList = new List<Bitmap>();
-            _resourcesMenager = resourcesMenager;
+            _resourcesManager = resourcesManager;
         }
 
         public List<Bitmap> CreateQueue(WURefineBot.Core.Enums.Resources resource)
@@ -29,8 +29,8 @@ namespace WURefineBot.Core.QueueCreators
             _imageList.Add(WURefineBot.Core.Properties.Resources.equipment);
             _imageList.Add(WURefineBot.Core.Properties.Resources.resources);
             _imageList.Add(WURefineBot.Core.Properties.Resources.lasers);
-            var ss = _resourcesMenager.GetResource(resource);          
-            _imageList.Add(ss.Getimage());
+            var ss = _resourcesManager.GetResource(resource);          
+            _imageList.Add(ss.GetImage());
             _imageList.Add(WURefineBot.Core.Properties.Resources.enrich);
         }
     }
