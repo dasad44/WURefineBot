@@ -9,7 +9,7 @@ using WURefineBot.Core.Interfaces.Menagers.Resources;
 
 namespace WURefineBot.Core.Menagers
 {
-    class ResourceMenager : IResourcesManager
+    class ResourceManager : IResourcesManager
     {
         private IResource _resource;
         public IResource GetResource(WURefineBot.Core.Enums.Resources resources)

@@ -17,20 +17,19 @@ namespace WURefineBot.Core.QueueCreators
             _resourcesManager = resourcesManager;
         }
 
-        public List<Bitmap> CreateQueue(WURefineBot.Core.Enums.Resources resource)
+        public List<Bitmap> GetQueue(WURefineBot.Core.Enums.Resources resource)
         {
-            GetImagesFromResources(resource);         
+            CreateImageList(resource);         
             return _imageList;
         }
         
-        private void GetImagesFromResources(WURefineBot.Core.Enums.Resources resource) 
+        private void CreateImageList(WURefineBot.Core.Enums.Resources resource) 
         {
             _imageList.Add(WURefineBot.Core.Properties.Resources.Menu);
             _imageList.Add(WURefineBot.Core.Properties.Resources.equipment);
             _imageList.Add(WURefineBot.Core.Properties.Resources.resources);
-            _imageList.Add(WURefineBot.Core.Properties.Resources.lasers);
-            var ss = _resourcesManager.GetResource(resource);          
-            _imageList.Add(ss.GetImage());
+            _imageList.Add(WURefineBot.Core.Properties.Resources.lasers);          
+            _imageList.Add(_resourcesManager.GetResource(resource).GetImage());
             _imageList.Add(WURefineBot.Core.Properties.Resources.enrich);
         }
     }
