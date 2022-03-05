@@ -2,17 +2,18 @@
 using AForge.Imaging;
 using AForge.Imaging.Filters;
 using System.Drawing;
-using WURefineBot.Infrastructure.Interfaces;
+using System.Runtime.InteropServices;
 
 namespace WURefineBot.Infrastructure.AI
 {
     static class AIHandler 
     {
-        public static bool Contains(this Bitmap template, Bitmap bmp)
+        [DllImport("User32.dll")]
+        private static extern bool SetCursorPos(int X, int Y);
+        public static void ifContainsSetMousePosition(this Bitmap template, Bitmap bmp)
         {
-            Rectangle tempRect;
+            Rectangle tempRect = new Rectangle();
             const Int32 divisor = 4;
-            const Int32 epsilon = 10;
 
             ExhaustiveTemplateMatching etm = new ExhaustiveTemplateMatching(0.9f);
 
@@ -25,18 +26,12 @@ namespace WURefineBot.Infrastructure.AI
                 tempRect = tm[0].Rectangle;
             }
             catch (IndexOutOfRangeException ex)
-            {
-                return false;
-            }
-
-            Color pixelColor = template.GetPixel(bmp.Width, bmp.Height);
-            if (Math.Abs(bmp.Width / divisor - tempRect.Width) < epsilon
-                &&
-                Math.Abs(bmp.Height / divisor - tempRect.Height) < epsilon)
-            {
-                return true;
-            }
-            return false;
+            { }
+            SetPosition(tempRect.Location.X * 4, tempRect.Location.Y * 4);
+        }
+        private static void SetPosition(int X, int Y)
+        {
+            SetCursorPos(X, Y);
         }
     }
 }
