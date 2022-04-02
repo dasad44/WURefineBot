@@ -1,20 +1,99 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj": {}
+    "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj": {}
   },
   "projects": {
-    "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj": {
+    "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.Core\\WURefineBot.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
-        "projectName": "WURefineBot",
-        "projectPath": "D:\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
-        "packagesPath": "C:\\Users\\mateusz\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\WURefineBot\\WURefineBot\\obj\\",
+        "projectUniqueName": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.Core\\WURefineBot.Core.csproj",
+        "projectName": "WURefineBot.Core",
+        "projectPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.Core\\WURefineBot.Core.csproj",
+        "packagesPath": "C:\\Users\\dasad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.TestPlatform.TestHost": {
+              "target": "Package",
+              "version": "[17.0.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj",
+        "projectName": "WURefineBot.Infrastructure",
+        "projectPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\dasad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,11 +119,11 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
-            "Microsoft.Extensions.Configuration": {
+            "AForge.Imaging": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[2.2.5, )"
             },
-            "Microsoft.Extensions.DependencyInjection": {
+            "System.Drawing.Common": {
               "target": "Package",
               "version": "[6.0.0, )"
             }
@@ -63,11 +142,99 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
+        "projectName": "WURefineBot",
+        "projectPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot\\WURefineBot.csproj",
+        "packagesPath": "C:\\Users\\dasad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.Core\\WURefineBot.Core.csproj": {
+                "projectPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.Core\\WURefineBot.Core.csproj"
+              },
+              "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\dasad\\source\\repos\\WURefineBot\\WURefineBot.infrastructure\\WURefineBot.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.12, 5.0.12]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

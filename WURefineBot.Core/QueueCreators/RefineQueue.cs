@@ -7,7 +7,7 @@ using WURefineBot.Infrastructure.Interfaces;
 
 namespace WURefineBot.Core.QueueCreators
 {
-    class RefineQueue : IRefineQueue 
+    public class RefineQueue : IRefineQueue 
     {
         private readonly IResourcesManager _resourcesManager;
         private readonly List<Bitmap> _imageList;

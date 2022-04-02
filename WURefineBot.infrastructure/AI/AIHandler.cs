@@ -6,10 +6,14 @@ using System.Runtime.InteropServices;
 
 namespace WURefineBot.Infrastructure.AI
 {
-    static class AIHandler 
+    public static class AIHandler 
     {
         [DllImport("User32.dll")]
         private static extern bool SetCursorPos(int X, int Y);
+        public const int MOUSEEVENTF_LEFTDOWN = 0x02;
+        public const int MOUSEEVENTF_LEFTUP = 0x04;
+
+        public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
         public static void ifContainsSetMousePosition(this Bitmap template, Bitmap bmp)
         {
             Rectangle tempRect = new Rectangle();
@@ -27,11 +31,13 @@ namespace WURefineBot.Infrastructure.AI
             }
             catch (IndexOutOfRangeException ex)
             { }
-            SetPosition(tempRect.Location.X * 4, tempRect.Location.Y * 4);
+            SetPositionAndClick(tempRect.Location.X * 4, tempRect.Location.Y * 4);
         }
-        private static void SetPosition(int X, int Y)
+        private static void SetPositionAndClick(int X, int Y)
         {
             SetCursorPos(X, Y);
+            mouse_event(MOUSEEVENTF_LEFTDOWN, X, Y, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
         }
     }
 }

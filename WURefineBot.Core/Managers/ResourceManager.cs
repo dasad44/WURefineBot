@@ -9,7 +9,7 @@ using WURefineBot.Core.Interfaces.Menagers.Resources;
 
 namespace WURefineBot.Core.Menagers
 {
-    class ResourceManager : IResourcesManager
+    public class ResourceManager : IResourcesManager
     {
         private IResource _resource;
         public IResource GetResource(WURefineBot.Core.Enums.Resources resources)
@@ -25,7 +25,6 @@ namespace WURefineBot.Core.Menagers
             }
             return _resource;
         }
-
     }
     class DarkonitResource : IResource
     {

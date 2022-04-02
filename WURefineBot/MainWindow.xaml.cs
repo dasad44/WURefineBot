@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WURefineBot.Core.Interfaces.Services;
 
 namespace WURefineBot
 {
@@ -20,9 +21,17 @@ namespace WURefineBot
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IRefineService _refineService;
+
+        public MainWindow(IRefineService refineService)
         {
             InitializeComponent();
+            _refineService = refineService;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            _refineService.ExecuteRefine(WURefineBot.Core.Enums.Resources.Darkonit);
         }
     }
 }

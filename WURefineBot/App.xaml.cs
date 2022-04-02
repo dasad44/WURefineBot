@@ -7,6 +7,15 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WURefineBot.Core.Interfaces.Menagers;
+using WURefineBot.Core.Interfaces.QueueCreators;
+using WURefineBot.Core.Interfaces.Services;
+using WURefineBot.Core.Menagers;
+using WURefineBot.Core.QueueCreators;
+using WURefineBot.Core.Services;
+using WURefineBot.Infrastructure.AI;
+using WURefineBot.Infrastructure.Imaging;
+using WURefineBot.Infrastructure.Interfaces;
 
 namespace WURefineBot
 {
@@ -21,6 +30,10 @@ namespace WURefineBot
         {
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
+            serviceCollection.AddScoped<IScreenHandler, ScreenHandler>();
+            serviceCollection.AddScoped<IResourcesManager, ResourceManager>();
+            serviceCollection.AddScoped<IRefineQueue, RefineQueue>();
+            serviceCollection.AddScoped<IRefineService, RefineService>();
             ServiceProvider = serviceCollection.BuildServiceProvider();
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();

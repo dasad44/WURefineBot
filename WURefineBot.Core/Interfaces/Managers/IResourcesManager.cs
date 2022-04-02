@@ -2,7 +2,7 @@
 
 namespace WURefineBot.Core.Interfaces.Menagers
 {
-    interface IResourcesManager
+    public interface IResourcesManager
     {
         IResource GetResource(WURefineBot.Core.Enums.Resources resources);
     }

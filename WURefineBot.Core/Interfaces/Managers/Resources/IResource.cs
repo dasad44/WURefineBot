@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WURefineBot.Core.Interfaces.Menagers.Resources
 {
-    interface IResource
+    public interface IResource
     {
         Bitmap GetImage();
     }
