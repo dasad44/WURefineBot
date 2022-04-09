@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using WURefineBot.Core.Interfaces.QueueCreators;
 using WURefineBot.Core.Interfaces.Services;
@@ -27,6 +28,7 @@ namespace WURefineBot.Core.Services
             {
                 var fullScreen = _screenHandler.GetMainScreen();
                 fullScreen.ifContainsSetMousePosition(image);
+                Thread.Sleep(3000);
             }
         }
     }

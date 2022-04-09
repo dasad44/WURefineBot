@@ -6,16 +6,18 @@ using System.Runtime.InteropServices;
 
 namespace WURefineBot.Infrastructure.AI
 {
-    public static class AIHandler 
+    public static class AIHandler
     {
-        [DllImport("User32.dll")]
-        private static extern bool SetCursorPos(int X, int Y);
+        [DllImport("user32.dll")]
+        static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
+        [DllImport("user32.dll")]
+        static extern bool SetCursorPos(int X, int Y);
         public const int MOUSEEVENTF_LEFTDOWN = 0x02;
         public const int MOUSEEVENTF_LEFTUP = 0x04;
 
-        public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
         public static void ifContainsSetMousePosition(this Bitmap template, Bitmap bmp)
         {
+            bmp = AForge.Imaging.Image.Clone(bmp, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             Rectangle tempRect = new Rectangle();
             const Int32 divisor = 4;
 
@@ -31,13 +33,13 @@ namespace WURefineBot.Infrastructure.AI
             }
             catch (IndexOutOfRangeException ex)
             { }
-            SetPositionAndClick(tempRect.Location.X * 4, tempRect.Location.Y * 4);
+            SetPositionAndClick(tempRect.Location.X * 4 + 3, tempRect.Location.Y * 4 + 3);
         }
         private static void SetPositionAndClick(int X, int Y)
         {
             SetCursorPos(X, Y);
-            mouse_event(MOUSEEVENTF_LEFTDOWN, X, Y, 0, 0);
-            mouse_event(MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         }
     }
 }
